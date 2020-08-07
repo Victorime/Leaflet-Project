@@ -49,7 +49,8 @@ It contains the CSS file with the formatting information
 It contains the js with the Javascript code using the D3 library for the interactive plots.
 
 Leaflet-Step-2
-It contains all the files for the second part of the project.
-All folder are the same with this exception:
+* It contains all the files for the second part of the project.
+* All folder are the same with this exception:
+
 static (2)
 It contains an additional folder that contains the JSON file with the tectonic-plate-boundaries information
