@@ -47,8 +47,7 @@ Contains the HTML code that drives the maps and references the required librarie
 static
 It contains the CSS file with the formatting information
 It contains the js with the Javascript code using the D3 library for the interactive plots.
-Screenshots
-It contains the gif and png files with screenshots of the app running
+
 Leaflet-Step-2
 It contains all the files for the second part of the project.
 All folder are the same with this exception:
