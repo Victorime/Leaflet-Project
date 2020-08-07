@@ -83,10 +83,26 @@ d3.json("https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geoj
     }
   }).addTo(map);
   
+  
   // Here we create a legend control object.
   var legend = L.control({
     position: "bottomright"
   });
+  
+  
+  // Then add all the details for the legend
+  legend.onAdd = function() {
+    var div = L.DomUtil.create("div", "info legend");
+
+    var grades = [0, 1, 2, 3, 4, 5];
+    var colors = [
+      "#98ee00",
+      "#d4ee00",
+      "#eecc00",
+      "#ee9c00",
+      "#ea822c",
+      "#ea2c2c"
+    ];
   
   
   
