@@ -66,6 +66,12 @@ function colorchoice(mag){
 }
 
 
+d3.json(data_url, function(response) {
+
+console.log(response);
+  // Loop through data
+  for (var i = 0; i < response.features.length; i++) {
+
 
 
 
