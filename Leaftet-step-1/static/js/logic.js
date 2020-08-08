@@ -31,7 +31,11 @@ var dark = L.tileLayer("https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?acc
   accessToken: API_KEY
 });
 
-
+var baseMaps = {
+  "Light": light,
+  "Dark": dark,
+  "Street" : Street
+};
 
 
 
