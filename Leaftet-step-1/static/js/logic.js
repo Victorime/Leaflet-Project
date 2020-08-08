@@ -1,5 +1,11 @@
-//We create the tile layer we will be using for the backgroud
-console.log("great job")
+// Creating map object
+var QuakeMarkers=[]
+// var myMap = L.map("map", {
+//   center: [
+//       37.09, -95.71
+//     ],
+//   zoom: 3
+// });
 
 
 var apiKey = API_KEY;
