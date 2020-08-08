@@ -7,6 +7,7 @@ var QuakeMarkers=[]
 //   zoom: 3
 // });
 
+
 // Adding tile layer to the map
 var Street=L.tileLayer("https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}", {
   attribution: "Map data &copy; <a href=\"https://www.openstreetmap.org/\">OpenStreetMap</a> contributors, <a href=\"https://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA</a>, Imagery © <a href=\"https://www.mapbox.com/\">Mapbox</a>",
@@ -14,6 +15,7 @@ var Street=L.tileLayer("https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?acc
   id: "mapbox.streets",
   accessToken: API_KEY
 });
+
 
 var light = L.tileLayer("https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}", {
   attribution: "Map data &copy; <a href=\"https://www.openstreetmap.org/\">OpenStreetMap</a> contributors, <a href=\"https://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA</a>, Imagery © <a href=\"https://www.mapbox.com/\">Mapbox</a>",
@@ -36,7 +38,6 @@ var baseMaps = {
 };
 
 
-
 var data_url="https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geojson"
 
 function markerSize(mag) {
@@ -46,7 +47,8 @@ function markerSize(mag) {
 function colorchoice(mag){
 
   var color ="greenyellow";
-
+  
+  
   if (mag >5)
     color="red"
   else if (mag >4)
@@ -64,13 +66,12 @@ function colorchoice(mag){
 }
 
 
-
 d3.json(data_url, function(response) {
 
 console.log(response);
   // Loop through data
   for (var i = 0; i < response.features.length; i++) {
-
+    
     // Set the data location property to a variable
     var location = response.features[i].geometry;
     var property = response.features[i].properties;
@@ -92,7 +93,7 @@ console.log(response);
   }
 
   }
-
+  
   var EarthQuakesLayer = L.layerGroup(QuakeMarkers)
   var  overlayMaps = {
           "EarthQuakes": EarthQuakesLayer };
@@ -110,3 +111,19 @@ console.log(response);
 
 
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
