@@ -71,6 +71,29 @@ d3.json(data_url, function(response) {
 console.log(response);
   // Loop through data
   for (var i = 0; i < response.features.length; i++) {
+    
+    // Set the data location property to a variable
+    var location = response.features[i].geometry;
+    var property = response.features[i].properties;
+    // Check for location property
+    if (location) {
+     
+      QuakeMarkers.push(
+
+     L.circleMarker([location.coordinates[1],location.coordinates[0]], {
+      opacity: 0.73,
+      fillOpacity: 0.91,
+      color: "black",
+      fillColor: colorchoice(property.mag),
+      weight: 1,
+      // Setting our circle's radius equal to the output of our markerSize function
+      // This will make our marker's size proportionate to its population
+      radius: markerSize(property.mag)
+    }).bindPopup("<h3>" + property.place + "</h3><hr><p>" + new Date(property.time) + "</p><hr><p>Magnitude: " + property.mag + "</p>"));
+  }
+
+  }
+
 
 
 
