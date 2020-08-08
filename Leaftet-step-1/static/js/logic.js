@@ -38,6 +38,22 @@ var baseMaps = {
 };
 
 
+var data_url="https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geojson"
+
+function markerSize(mag) {
+  var rmag=mag*2;
+  return rmag;
+}
+function colorchoice(mag){
+
+  var color ="greenyellow";
+
+
+
+
+
+
+
 
 
 
