@@ -47,6 +47,24 @@ function markerSize(mag) {
 function colorchoice(mag){
 
   var color ="greenyellow";
+  
+  
+  if (mag >5)
+    color="red"
+  else if (mag >4)
+    color="orange"
+  else if (mag>3)
+    color ="gold"
+  else if (mag>2)
+    color="yellow"
+  else if (mag>1)
+    color="yellowgreen"
+  else 
+    color = color;
+
+  return color;
+}
+
 
 
 
